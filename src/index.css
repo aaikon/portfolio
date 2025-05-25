@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  --cl-black: #0E0E10;
+  --cl-white: #CBD0CC;
+
+  color-scheme: light dark;
+  color: var(--cl-white);
+  background-color: var(--cl-black);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--cl-black);
+    background-color: var(--cl-white);
+  }
+}
