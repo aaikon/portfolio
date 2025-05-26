@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="flex flex-row gap-[16px]">
+    <div className="flex h-auto w-full flex-row gap-[16px]">
       <div className="flex w-full flex-row gap-[16px]">
         <div className="h-[220px] w-[200px] bg-[#888888]" />
         <p>arttu ikonen</p>
@@ -17,7 +17,7 @@ const Header = () => {
         <p>Linked In</p>
         <p>GitHub</p>
       </div>
-    </header>
+    </div>
   );
 };
 

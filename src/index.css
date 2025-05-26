@@ -5,8 +5,8 @@
   line-height: 1;
   font-weight: 400;
 
-  --cl-black: #0E0E10;
-  --cl-white: #CBD0CC;
+  --cl-black: #0e0e10;
+  --cl-white: #cbd0cc;
 
   color-scheme: light dark;
   color: var(--cl-white);
