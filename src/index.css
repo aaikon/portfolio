@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --color-black-500: #0e0e10;
+  --color-white-500: #cbd0cc;
+}
+
+@font-face {
+  font-family: blur;
+  src: url("./fonts/BlurBold.ttf");
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
 :root {
-  font-family: system-ui, sans-serif;
+  font-family: blur, system-ui, sans-serif;
   line-height: 1;
   font-weight: 400;
 
@@ -23,4 +38,10 @@
     color: var(--cl-black);
     background-color: var(--cl-white);
   }
+}
+
+h3,
+p,
+a {
+  font-size: 12px;
 }

@@ -1,8 +1,6 @@
 const Tag = ({ text }) => {
   return (
-    <p className="rounded-[3px] border-[0.5px] p-0.5 text-nowrap text-orange-500">
-      {text}
-    </p>
+    <p className="rounded-lg border-3 p-1 text-nowrap text-gray-500">{text}</p>
   );
 };
 
