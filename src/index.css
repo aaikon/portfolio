@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: geist;
+  src: url("./fonts/Geist-Regular.ttf");
+  font-style: regular;
+}
+
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
 
 :root {
-  font-family: system-ui, sans-serif;
+  font-family: geist, system-ui, sans-serif;
   line-height: 1;
   font-weight: 400;
 
-  --cl-black: #0e0e10;
-  --cl-white: #cbd0cc;
-
-  color-scheme: light dark;
-  color: var(--cl-white);
-  background-color: var(--cl-black);
+  color: #ffffff;
+  background-color: #0c0c0c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,9 +27,17 @@
   scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--cl-black);
-    background-color: var(--cl-white);
-  }
+h1,
+h2,
+button {
+  font-size: 14px;
+  text-wrap: nowrap;
+}
+
+h2 {
+  color: #737373;
+}
+
+button {
+  cursor: pointer;
 }
