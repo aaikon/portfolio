@@ -7,7 +7,7 @@ const ProjectGridCard = ({ project }) => {
       </div>
       <div className="flex w-full flex-row gap-2">
         {project.tags.map((tag) => (
-          <h2>{tag}</h2>
+          <h2 key={tag}>{tag}</h2>
         ))}
       </div>
     </div>

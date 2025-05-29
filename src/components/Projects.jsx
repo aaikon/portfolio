@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProjectGridCard from "./ProjectGridCard";
+import ProjectListCard from "./ProjectListCard";
 
 const Projects = ({ projects }) => {
   const [view, setView] = useState("grid");
@@ -25,11 +26,15 @@ const Projects = ({ projects }) => {
       {view === "grid" ? (
         <div className="grid h-fit w-full grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))] gap-x-2 gap-y-16">
           {projects.map((project) => (
-            <ProjectGridCard project={project} />
+            <ProjectGridCard key={project.id} project={project} />
           ))}
         </div>
       ) : (
-        <h1>LIST</h1>
+        <div className="flex h-fit w-full flex-col gap-1">
+          {projects.map((project) => (
+            <ProjectListCard key={project.id} project={project} />
+          ))}
+        </div>
       )}
     </div>
   );

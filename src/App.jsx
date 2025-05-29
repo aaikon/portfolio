@@ -4,18 +4,17 @@ import Projects from "./components/Projects";
 const App = () => {
   const projects = [
     {
+      id: 1,
       title: "TITLE",
       tags: ["REACT", "TAILWIND"],
     },
     {
+      id: 2,
       title: "TITLE",
       tags: ["REACT", "TAILWIND"],
     },
     {
-      title: "TITLE",
-      tags: ["REACT", "TAILWIND"],
-    },
-    {
+      id: 3,
       title: "TITLE",
       tags: ["REACT", "TAILWIND"],
     },
