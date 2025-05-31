@@ -1,7 +1,10 @@
 const ProjectGridCard = ({ project }) => {
   return (
     <div className="flex flex-col gap-2">
-      <img className="aspect-16/9 w-full bg-neutral-500" />
+      <div className="relative group" tabIndex={0}>
+        <img className="aspect-16/9 w-full bg-neutral-500" />
+        <a className="absolute inset-0" href={project.link} target="_blank"></a>
+      </div>
       <div className="w-full grid grid-cols-2">
         <h1>{project.title}</h1>
         <h1>{project.date}</h1>

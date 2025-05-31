@@ -7,25 +7,27 @@ const App = () => {
       id: 1,
       title: "TITLE",
       date: "2023-10-01",
+      link: "http://localhost:5173/",
       tags: ["REACT", "TAILWIND"],
     },
     {
       id: 2,
       title: "TITLE",
       date: "2023-10-01",
+      link: "http://localhost:5173/",
       tags: ["REACT", "TAILWIND"],
     },
     {
       id: 3,
       title: "TITLE",
       date: "2023-10-01",
+      link: "http://localhost:5173/",
       tags: ["REACT", "TAILWIND"],
     },
   ];
   return (
-    <div className="h-fit w-full p-4">
+    <div className="h-fit w-full p-4 flex flex-col gap-4">
       <Header />
-      <div className="h-[400px]" />
       <Projects projects={projects} />
     </div>
   );
