@@ -29,7 +29,8 @@
 
 h1,
 h2,
-button {
+button,
+a {
   font-size: 14px;
   text-wrap: nowrap;
 }

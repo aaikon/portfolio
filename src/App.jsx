@@ -6,16 +6,19 @@ const App = () => {
     {
       id: 1,
       title: "TITLE",
+      date: "2023-10-01",
       tags: ["REACT", "TAILWIND"],
     },
     {
       id: 2,
       title: "TITLE",
+      date: "2023-10-01",
       tags: ["REACT", "TAILWIND"],
     },
     {
       id: 3,
       title: "TITLE",
+      date: "2023-10-01",
       tags: ["REACT", "TAILWIND"],
     },
   ];
