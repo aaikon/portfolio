@@ -1,9 +1,18 @@
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Scene } from "three";
+import { useState } from "react";
+import { a, useSpring } from "@react-spring/three";
 
 const Header = () => {
-  const { nodes, materials } = useGLTF("/ball.glb");
+  const { nodes } = useGLTF("/models/spikey-ball.glb");
+
+  const [hovered, setHovered] = useState(false);
+
+  const { scale } = useSpring({
+    scale: hovered ? 0.012 : 0.01,
+    config: { mass: 1, tension: 170, friction: 26 },
+  });
+
   return (
     <header className="flex h-fit w-full flex-col gap-4">
       <nav className="flex h-fit w-full justify-between">
@@ -27,19 +36,21 @@ const Header = () => {
           <div className="size-2 rounded-full bg-white" />
         </div>
       </nav>
-      <div className="h-[500px] w-full">
+      <div className="h-[1000px] w-screen -mx-[calc((100vw-100%)/2)] bg-neutral-900 ">
         <Canvas>
           <ambientLight intensity={0.5} />
           <directionalLight position={[2, 2, 2]} intensity={1} />
-          <mesh geometry={nodes.ball.geometry} scale={0.02}>
-            <meshPhysicalMaterial
-              map={materials.material.map}
-              roughnessMap={materials.material.roughnessMap}
-              metalnessMap={materials.material.metalnessMap}
-              normalMap={materials.material.normalMap}
-            />
-          </mesh>
-          <OrbitControls autoRotate autoRotateSpeed={1} />
+
+          <a.mesh
+            geometry={nodes.model.geometry}
+            scale={scale}
+            onPointerOver={() => setHovered(true)}
+            onPointerOut={() => setHovered(false)}
+          >
+            <meshStandardMaterial />
+          </a.mesh>
+
+          <OrbitControls autoRotate autoRotateSpeed={0.5} enableZoom={false} />
         </Canvas>
       </div>
     </header>
